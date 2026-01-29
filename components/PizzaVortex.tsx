@@ -3,10 +3,10 @@
 import { useScroll, useSpring, useTransform, MotionValue } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
-// Reduced frame count - load every 4th frame for faster loading (240 -> 60 frames)
-const FRAME_STEP = 4;
+// Reduced frame count - load every 2nd frame for balance (240 -> 120 frames)
+const FRAME_STEP = 2;
 const TOTAL_FRAMES = 240;
-const FRAME_COUNT = Math.floor(TOTAL_FRAMES / FRAME_STEP); // 60 frames
+const FRAME_COUNT = Math.floor(TOTAL_FRAMES / FRAME_STEP); // 120 frames
 
 export default function PizzaVortex({ scrollYProgress }: { scrollYProgress?: MotionValue<number> }) {
     const canvasRef = useRef<HTMLCanvasElement>(null);
